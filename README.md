@@ -14,11 +14,11 @@
 
 ### GET /topics
  
-```$ console curl -X GET http://localhost:8080/topics ```
+```$ curl -X GET http://localhost:8080/topics ```
 
 ### Get /topics/{id}
 
-```$ console curl -X GET http://localhost:8080/topics/Spring2 ```
+```$ curl -X GET http://localhost:8080/topics/Spring2 ```
 
 ```json
 {
@@ -30,8 +30,9 @@
 
 
 ### POST /topic
+// FIXME
 ```console
-$ console curl -X POST http://localhost:8080/topics \ 
-    -H "Content-Type: application/json" \
+$ curl -X POST http://localhost:8080/topics  
+    -H "Content-Type: application/json" 
     d '{"id": "Spring6", "name": "name6", "description": "description6"}' 
 ```
