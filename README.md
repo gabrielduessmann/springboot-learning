@@ -29,10 +29,18 @@
 ```
 
 
-### POST /topic
+### POST /topics
 // FIXME
 ```console
 $ curl -X POST http://localhost:8080/topics  
     -H "Content-Type: application/json" 
     d '{"id": "Spring6", "name": "name6", "description": "description6"}' 
+```
+
+### PUT /topics/{id}
+// FIXME
+```console
+$ curl -X PUT http://localhost:8080/topics/Spring6  
+    -H "Content-Type: application/json" 
+    d '{"id": "Spring6", "name": "NoName", "description": "NoDescription"}' 
 ```
