@@ -8,3 +8,26 @@
 - sets up default configuration
 - start Spring Application context
 - starts Tomcat server
+
+
+## Rest API
+
+### GET /topics
+ 
+```$ console curl -X GET http://localhost:8080/topics ```
+
+### Get /topics/{id}
+
+```$ console curl -X GET http://localhost:8080/topics/Spring2 ```
+
+```json
+{
+    id: "Spring2", 
+    name: "Spring framework 2", 
+    description: "Spring tutorial 2"
+} 
+```
+
+
+### POST /topic
+ > ```localhost:8080/topics```
