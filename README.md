@@ -1,5 +1,9 @@
 # springboot
 
+Project to learn Spring Boot.
+It was based on 
+
+```https://www.youtube.com/watch?v=msXL2oDexqw&list=PLqq-6Pq4lTTbx8p2oCgcAQGQyqN8XeA1x&index=1```
 
 ## Instalation
 
@@ -7,6 +11,8 @@
 ``` mvn clean install ```
 
 Clean the target/ and rebuild the target folder.
+
+
 
 ## Technologies
 
