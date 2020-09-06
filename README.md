@@ -5,6 +5,7 @@
 
 - Spring Boot
 - Spring Data JPA
+- Apache Derby
 
 ### Starting Spring Boot
 > Class ```src/main/java/springbootstarter/ApiApp.java```
