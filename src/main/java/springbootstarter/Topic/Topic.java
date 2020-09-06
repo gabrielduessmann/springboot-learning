@@ -1,8 +1,14 @@
 package springbootstarter.Topic;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Topic
 {
 
+	// Primary Key
+	@Id
 	private String id;
 	private String name;
 	private String description;
@@ -24,6 +30,7 @@ public class Topic
 
 	// Getters and setters
 
+	@Id
 	public String getId()
 	{
 		return id;
