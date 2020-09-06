@@ -1,42 +1,31 @@
-package springbootstarter.Topic;
+package springbootstarter.Course;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import springbootstarter.Topic.Topic;
 
 @Entity
-public class Topic
+public class Course
 {
 
-	// Primary Key
 	@Id
 	private String id;
 	private String name;
 	private String description;
 
-	// Constructor
-	public Topic(String id, String name, String description)
+	private Topic topic;
+
+	public Course()
 	{
-		super();
+	}
+
+	public Course(String id, String name, String description, String topicId){
 		this.id = id;
 		this.name = name;
 		this.description = description;
+		this.topic = new Topic(topicId, "", "");
 	}
 
-	// Easier to initialize
-	// Non constructor
-	public Topic()
-	{
-	}
-
-	public Topic(String id){
-		this.id = id;
-		this.name = "";
-		this.description = "";
-	}
-
-	// Getters and setters
-
-	@Id
 	public String getId()
 	{
 		return id;
@@ -67,9 +56,14 @@ public class Topic
 		this.description = description;
 	}
 
-	public static Topic getOne(Topic topic){
-		return new Topic (topic.getId(), topic.getName(), topic.getDescription());
+	public Topic getTopic()
+	{
+		return topic;
 	}
 
+	public void setTopic(Topic topic)
+	{
+		this.topic = topic;
+	}
 
 }

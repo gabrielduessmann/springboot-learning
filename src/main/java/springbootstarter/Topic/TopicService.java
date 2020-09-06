@@ -19,6 +19,7 @@ public class TopicService
 			.forEach(topics::add);
 			return topics;
 		}
+
 		public Topic getOneTopic(String id){
 			return topicRepository.findById(id).orElse(null);
 		}
