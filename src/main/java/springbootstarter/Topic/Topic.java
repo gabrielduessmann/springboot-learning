@@ -61,5 +61,9 @@ public class Topic
 		this.description = description;
 	}
 
+	public static Topic getOne(Topic topic){
+		return new Topic (topic.getId(), topic.getName(), topic.getDescription());
+	}
+
 
 }

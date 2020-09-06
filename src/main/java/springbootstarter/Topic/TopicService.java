@@ -3,6 +3,8 @@ package springbootstarter.Topic;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 // Business server
@@ -10,39 +12,28 @@ import org.springframework.stereotype.Service;
 @Service
 public class TopicService
 {
-		private List<Topic> topics = new ArrayList<>(Arrays.asList(
-			new Topic("Spring", "Spring framework", "Spring tutorial"),
-			new Topic("Spring2", "Spring framework 2", "Spring tutorial 2"),
-			new Topic("Spring3", "Spring framework 3", "Spring tutorial 3"),
-			new Topic("Spring4", "Spring framework 4", "Spring tutorial 4")
-		));
+	@Autowired
+	private TopicRepository topicRepository;
 
 		public List<Topic> getAllTopics(){
+			List<Topic> topics = new ArrayList<>();
+			topicRepository.findAll()
+			.forEach(topics::add);
 			return topics;
 		}
-
 		public Topic getOneTopic(String id){
-			return topics.stream().filter(
-					topics -> topics.getId().equals(id)
-				).findFirst().get();
+			return topicRepository.findById(id).orElse(null);
 		}
 
 		public void addTopic(Topic topic){
-			topics.add(topic);
+			topicRepository.save(topic);
 		}
 
 		public void updateTopic(Topic topic, String id){
-			int index=0;
-			for (Topic t : topics){
-				if (t.getId().equals(id)){
-					topics.set(index, topic);
-					return;
-				}
-				index++;
-			}
+			topicRepository.save(topic);
 		}
 
 		public void deleteTopic(String id){
-			topics.removeIf(t -> t.getId().equals(id));
+			topicRepository.deleteById(id);
 		}
 }
