@@ -1,6 +1,13 @@
 # springboot
 
 
+## Instalation
+
+### Build
+``` mvn clean install ```
+
+Clean the target/ and rebuild the target folder.
+
 ## Technologies
 
 - Spring Boot
