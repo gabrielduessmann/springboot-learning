@@ -28,12 +28,6 @@ public class Topic
 	{
 	}
 
-	public Topic(String id){
-		this.id = id;
-		this.name = "";
-		this.description = "";
-	}
-
 	// Getters and setters
 
 	@Id

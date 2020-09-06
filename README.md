@@ -19,6 +19,8 @@
 
 ## Rest API
 
+- Topics
+
 ### GET /topics
  
 ```$ curl -X GET http://localhost:8080/topics ```
@@ -41,7 +43,7 @@
 ```console
 $ curl -X POST http://localhost:8080/topics  
     -H "Content-Type: application/json" 
-    d '{"id": "Spring6", "name": "name6", "description": "description6"}' 
+    -d '{"id": "Spring6", "name": "name6", "description": "description6"}' 
 ```
 
 ### PUT /topic/{id}
@@ -49,9 +51,54 @@ $ curl -X POST http://localhost:8080/topics
 ```console
 $ curl -X PUT http://localhost:8080/topics/Spring6  
     -H "Content-Type: application/json" 
-    d '{"id": "Spring6", "name": "NoName", "description": "NoDescription"}' 
+    -d '{"id": "Spring6", "name": "NoName", "description": "NoDescription"}' 
 ```
 
 ### DELETE /topics/{id}
  
 ```$ curl -X DELETE http://localhost:8080/topics/Spring6 ```
+
+
+
+- Courses
+
+### GET /topics/{topicId}/courses
+ 
+```$ curl -X GET http://localhost:8080/topics/Spring/courses ```
+
+### Get /topics/{topicId}/courses/{id}
+
+```$ curl -X GET http://localhost:8080/topics/Spring/courses/Course1 ```
+
+```json
+{
+    "id": "Course1", 
+    "name": "Course1 name", 
+    "description": "Course1 description",
+    "topic":  {
+        "id": "Spring",
+        "name:": "Spring name",
+        "description": "Spring description"
+    } 
+} 
+```
+
+### POST /topics/{topicId}/courses
+// FIXME
+```console
+$ curl -X POST http://localhost:8080/topics/Spring/courses}  
+    -H "Content-Type: application/json" 
+    -d '{"id": "Spring6", "name": "name6", "description": "description6"}' 
+```
+
+### PUT POST /topics/{topicId}/courses
+// FIXME
+```console
+$ curl -X PUT http://localhost:8080/topics/Spring/courses/Course1  
+    -H "Content-Type: application/json" 
+    -d '{"id": "Spring1", "name": "Name2", "description": "Description2"}' 
+```
+
+### DELETE /topics/{topicId}/courses/{id}
+ 
+```$ curl -X DELETE http://localhost:8080/topics/Spring/courses/Course1 ```
