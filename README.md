@@ -1,5 +1,11 @@
 # springboot
 
+
+## Technologies
+
+- Spring Boot
+- Spring Data JPA
+
 ### Starting Spring Boot
 > Class ```src/main/java/springbootstarter/ApiApp.java```
 
@@ -37,10 +43,14 @@ $ curl -X POST http://localhost:8080/topics
     d '{"id": "Spring6", "name": "name6", "description": "description6"}' 
 ```
 
-### PUT /topics/{id}
+### PUT /topic/{id}
 // FIXME
 ```console
 $ curl -X PUT http://localhost:8080/topics/Spring6  
     -H "Content-Type: application/json" 
     d '{"id": "Spring6", "name": "NoName", "description": "NoDescription"}' 
 ```
+
+### DELETE /topics/{id}
+ 
+```$ curl -X DELETE http://localhost:8080/topics/Spring6 ```
