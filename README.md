@@ -8,11 +8,13 @@ It was based on
 ## Instalation
 
 ### Build
-``` mvn clean install ```
+``` $ mvn clean install ```
+
 
 Clean the target/ and rebuild the target folder.
 
-
+### Run
+``` $ mvn spring-boot:run ```
 
 ## Technologies
 
