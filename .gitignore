@@ -5,4 +5,5 @@
 derby.log
 
 target/
+main/resources/
 
