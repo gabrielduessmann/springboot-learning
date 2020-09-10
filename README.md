@@ -121,3 +121,17 @@ $ curl -X PUT http://localhost:8080/topics/Spring/courses/Course1
 ### DELETE /topics/{topicId}/courses/{id}
  
 ```$ curl -X DELETE http://localhost:8080/topics/Spring/courses/Course1 ```
+
+# Database Postgres
+
+* Change the Postgres database name 
+* ```username: ``` postgres
+* ```password: ``` 1234
+
+## Commnd list
+
+* ``` \l ``` Show all databases
+* ``` \c database_name ``` Use database
+* ``` \dt ``` Show all tables
+* ``` \dt ``` Show specific table
+* ``` \d ``` Show all tables

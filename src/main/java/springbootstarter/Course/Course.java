@@ -1,17 +1,19 @@
 package springbootstarter.Course;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import springbootstarter.Topic.Topic;
 
 @Entity
+@Table(name = "courses")
 public class Course
 {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private String id;
+	@Column(name = "name")
 	private String name;
+	@Column(name = "description")
 	private String description;
 
 	@ManyToOne

@@ -1,16 +1,19 @@
 package springbootstarter.Topic;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "topics")
 public class Topic
 {
 
 	// Primary Key
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private String id;
+	@Column(name = "name")
 	private String name;
+	@Column(name = "description")
 	private String description;
 
 	// Constructor
