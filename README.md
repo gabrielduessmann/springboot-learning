@@ -128,7 +128,7 @@ $ curl -X PUT http://localhost:8080/topics/Spring/courses/Course1
 * ```username: ``` postgres
 * ```password: ``` 1234
 
-## Commnd list
+## Command list
 
 * ``` \l ``` Show all databases
 * ``` \c database_name ``` Use database
