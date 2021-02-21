@@ -9,10 +9,12 @@ It was based on
 
 ```https://www.youtube.com/watch?v=msXL2oDexqw&list=PLqq-6Pq4lTTbx8p2oCgcAQGQyqN8XeA1x&index=1```
 
-## Instalation
+## Installation
 
 ### Build
-``` $ mvn clean install ```
+` $ mvn clean install `
+
+` $ docker-compose up `
 
 
 Clean the target/ and rebuild the target folder.
@@ -124,14 +126,27 @@ $ curl -X PUT http://localhost:8080/topics/Spring/courses/Course1
 
 # Database Postgres
 
-* Change the Postgres database name 
-* ```username: ``` postgres
-* ```password: ``` 1234
+* `database name:` springDocker    
+* ```username:``` postgres
+* ```password:``` postgres
+
+## Postgres Docker
+```docker pull postgres```<br>
+`docker run --name postgres -e POSTGRES_PASSWORD=1234 -p 5432:5432 -d postgres `<br>
+`docker exec -it postgres bash` <br>
 
 ## Command list
 
-* ``` \l ``` Show all databases
-* ``` \c database_name ``` Use database
-* ``` \dt ``` Show all tables
-* ``` \dt ``` Show specific table
-* ``` \d ``` Show all tables
+* `psql -U postgres` Create user 'postgres'
+* `/password` Set a new password  
+*  `\l ` Show all databases
+* ` create database database_name`  
+* ` \c database_name ` Use database
+* ` \dt ` Show all tables
+* ` \dt ` Show specific table
+* ` \d ` Show all tables
+* ` \q ` Exit database
+* ` exit ` Exit container (linux)
+
+If you are having issues with postgres configuration, watch this video below: <br>
+` https://www.youtube.com/watch?v=aHbE3pTyG-Q `

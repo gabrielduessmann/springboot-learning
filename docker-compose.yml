@@ -1,0 +1,10 @@
+version: '3'
+services:
+    dabatase:
+      image: "postgres:13.2"
+      environment:
+        - POSTGRES_DB=springDocker
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=postgres
+      ports:
+        - "5432:5432"
