@@ -130,10 +130,17 @@ $ curl -X PUT http://localhost:8080/topics/Spring/courses/Course1
 * ```username:``` postgres
 * ```password:``` postgres
 
-## Postgres Docker
+## Postgres Docker Setup
 ```docker pull postgres```<br>
 `docker run --name postgres -e POSTGRES_PASSWORD=1234 -p 5432:5432 -d postgres `<br>
 `docker exec -it postgres bash` <br>
+
+## Postgres Docker Usage (Postgres already in the docker container)
+* `docker start postgres-container`
+* `docker exec -it postgres-container /bin/bash`<br>
+* This will make you enter inside the container.
+* To run psql command, it will be required root role.
+* `psql -U postgres`
 
 ## Command list
 
